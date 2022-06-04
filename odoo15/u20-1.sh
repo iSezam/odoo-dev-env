@@ -5,9 +5,9 @@ mkdir -p /opt/odoo15
 chown -R $USER /opt/odoo15/
 apt install git -y
 git clone https://github.com/odoo/odoo -b 15.0 --depth=1 /opt/odoo15/odoo
+cd ~
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 cd ~/.pyenv && src/configure && make -C src
-cd $HOME
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
